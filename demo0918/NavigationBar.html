@@ -1,0 +1,77 @@
+<html>
+
+	<head>
+		<title>简易导航栏</title>
+		<meta charset="UTF-8" />
+	</head>
+	<style>
+		ul {
+			/*去除列表的小圆点*/
+			list-style: none;
+		}
+		
+		ul li {
+			/*使列表项不再遵循默认的自上而下样式,使之变成横向列表*/
+			float: left;
+			background-color: cyan;
+			margin-right:1px
+		}
+		
+		ul li a {
+			/*对导航栏分块*/
+			display: block;
+			/*宽度设置*/
+			width: 180px;
+			/*上内边距，通俗点讲就是导航栏离顶部的距离*/
+			padding-top: 10px;
+			/*左边距*/
+			padding-left: 10px; 
+			/*右边距*/
+			padding-right: 10px; 
+			/*文本居中显示*/
+			text-align: center;
+			/*设置字体的大小*/
+			font-size: 30px;
+			/*设置字体的颜色*/
+			color: dodgerblue;
+			/*取消下划线*/
+			text-decoration: none;
+		}
+		#nav {
+			width: auto;
+			
+		}
+		
+		
+	</style>
+
+	<body>
+		<div id="nav">
+			<ul>
+				<li>
+					<a href="https://www.baidu.com">百度</a>
+				</li>
+				<li>
+					<a href="https://www.baidu.com">必应</a>
+				</li>
+				<li>
+					<a href="https://www.sina.com">新浪</a>
+				</li>
+				<li>
+					<a href="https://www.sogou.com/">搜狗</a>
+				</li>
+				<li>
+					<a href="http://blog.mdan520.com">博客</a>
+				</li>
+				<li>
+					<a href="https://www.bilibili.com/">B站</a>
+				</li>
+				<li>
+					<a href="https://m.weibo.cn/">微博</a>
+				</li>
+
+			</ul>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选择器</title>
+		<style type="text/css">
+			p {
+				color: cornflowerblue;
+			}
+			.p {
+				color: blueviolet
+			}
+			#p{
+				color: red;
+			}
+			p a:visited {
+				color: lightslategrey;
+			}
+			
+			div p .link span{
+				color: darkblue;
+				font-size: xx-large;
+			}
+			
+			ul li[role=pa]{
+				font-size: xx-large;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<p>
+			<a href="https://www.baidu.com">百度一下</a>
+			哈哈哈哈哈哈哈哈哈哈或或或或或</p>
+		<p class="p">哈哈哈哈哈哈哈哈哈哈或或或或或</p>
+		<p id="p" class="p">哈哈哈哈哈哈哈哈哈哈或或或或或</p>
+		<p>哈哈哈哈哈哈哈哈哈哈或或或或或</p>
+		<p>哈哈哈哈哈哈哈哈哈哈或或或或或</p>
+		<div id="content">
+			<p>
+				<a class="link">
+					<span>
+						啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦
+					</span>
+				</a>
+			</p>
+		</div>
+		<ul>
+			<li role="pa">薯片</li>
+			<li role="pa">可乐</li>
+			<li role="pa">瓜子</li>
+			<li>衣服</li>
+			<li>鞋子</li>
+			<li>帽子</li>
+		
+		</ul>
+	</body>
+</html>

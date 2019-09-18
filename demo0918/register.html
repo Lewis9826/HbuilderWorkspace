@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>表单控件</title>
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+		<h2 align="center">注册用户</h2>
+		<hr />
+		<div align="center">
+			<form id="form1" method="get" action="index.html">
+				<p><label>用户名</label><input type="text" name="username" /></p>
+				<p><label>密码：</label><input type="password" name="password" /></p>
+				<p>
+					<label>性别：</label>
+					<input type="radio" name="gender" value="男" checked/><label>男</label> &nbsp;
+					<input type="radio" name="gender" value="女" /><label>女</label>
+				</p>
+				<p><label>城市：</label>
+					<select>
+						<option value="1">重庆</option>
+						<option value="2">深圳</option>
+						<option value="3">四川</option>
+						<option value="4">山东</option>
+						<option value="5">昆明</option>
+					</select>
+				</p>
+				<p><label>兴趣：</label>
+					<input type="checkbox" name="interest" value="足球" /><label>足球</label>
+					<input type="checkbox" name="interest" value="篮球" /><label>篮球</label>
+					<input type="checkbox" name="interest" value="网球" /><label>网球</label>
+					<input type="checkbox" name="interest" value="排球" /><label>排球</label>
+					<input type="checkbox" name="interest" value="棒球" /><label>棒球</label>
+				</p>
+				<p><label>出生年月：</label>
+					<input type="date" name="birthday" />
+				</p>
+				<p><label>自我介绍：</label>
+					<textarea name="introduce" rows="10" cols="80">自我介绍。。。</textarea>
+				</p>
+				<input type="submit" value="提交" />&nbsp;<input type="reset" value="取消" />
+
+			</form>
+		</div>
+
+	</body>
+
+</html>
