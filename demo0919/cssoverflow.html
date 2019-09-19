@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>overflow解决浮动元素不能撑开父级容器的问题</title>
+		<style type="text/css">
+			#content{
+				position: relative;
+				width: 1200px;
+				margin: 50px auto 50px;
+				border: dashed 3px black;
+				overflow: hidden;
+			}
+			#content ul{
+				margin: 0px;
+				padding: 0px;
+			}
+			#content ul li{
+				float: left;
+				list-style: cjk-heavenly-stem;
+				list-style-position: inside;
+				width: 200px;
+				height: 100px;
+				margin: 10px;
+				background-color: cornflowerblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<ul>
+				<li>哈哈</li>
+				<li>哈哈</li>
+				<li>哈哈</li>
+				<li>哈哈</li>
+				<li>哈哈</li>
+				<li>哈哈</li>
+				<li>哈哈</li>
+			</ul>
+		</div>
+	</body>
+</html>

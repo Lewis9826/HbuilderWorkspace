@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定位样式</title>
+		<style type="text/css">
+			div{
+				width: 300px;
+				height: 400px;
+				margin-top: 40px;
+			}
+			.p-static{
+				position: static;
+				background-color:dodgerblue ;
+				left: 240px;
+			}
+			.p-relative{
+				position: relative;
+				background-color:chocolate;
+				/*left: 240px;*/
+				right: -200px;
+			}
+			.p-abssolute{
+				position: absolute;
+				background-color: brown;
+			}
+			.p-fixed{
+				position: fixed;
+				background-color: darkslategray;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="p-static">静态</div>
+		<div class="p-relative">相对</div>
+		<div class="p-abssolute">绝对</div>
+		<div class="p-fixed">固定</div>
+	</body>
+</html>
