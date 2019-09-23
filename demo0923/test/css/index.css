@@ -2,7 +2,7 @@ body {
 	font-family: "微软雅黑";
 	font-size: 16px;
 	margin: 0px;
-	background-image: url(../img/loginbg.jpg);
+	background-image: url(../img/bg.jpg);
 	background-repeat: no-repeat; 
 	background-size: cover;
 }
@@ -15,7 +15,7 @@ header {
 
 header .logo {
 	display: block;
-	margin: 40px auto 30px;
+	margin: 0px auto 0px;
 }
 
 header nav {
@@ -55,6 +55,36 @@ header nav ul li a {
 header nav ul li a:hover {
 	background-color: deepskyblue;
 }
-.view{
-	
+#box {
+	position: relative;
+	width: 90%;
+	height: 700px;
+	background-color: rgba(125,125,125,0.5);
+	border-radius: 5px;
+	margin: 30px auto 0px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#box section {
+	flex-basis: 240px;
+	height: 200px;
+	margin: 13px;
+	border-radius: 3px;
+	flex-grow: 1;
+}
+.button{
+	text-align: right;
+}
+.button button{
+	width: 100px;
+	min-height: 20px;
+	display: block;
+	background-color: #4a77d4;
+	border: 1px solid #3762bc;
+	color: #fff;
+	padding: 9px 14px;
+	line-height: normal;
+	border-radius: 5px;
+	margin-left: 1420px;
 }

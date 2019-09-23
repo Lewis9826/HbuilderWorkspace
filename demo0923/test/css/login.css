@@ -2,11 +2,11 @@ body{
 	font-family: "微软雅黑";
 	font-size: 16px;
 	margin: 0px;
-	background-image: url(../img/loginbg.jpg);
+	background-image: url(../img/bg.jpg);
 	background-repeat: no-repeat; 
 	background-size: cover;
 }
-#login{   
+.login{
     position: absolute;   
     top: 50%;   
     left:50%;   
@@ -14,16 +14,37 @@ body{
     width: 300px;   
     height: 300px;   
 }   
-#login h1{   
+.login h1{
     color: #fff;   
-    text-shadow:0 0 10px;   
+    text-shadow:0 0 10px;
     letter-spacing: 1px;   
     text-align: center;   
 }   
 h1{   
     font-size: 2em;   
     margin: 0.67em 0;   
-}   
+}
+#user label .icon-user{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    left: 0;
+    background-image: url("../img/user1.png");
+    background-size: cover;
+}
+#user label .icon-password{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    left: 0;
+    border: black;
+    background-image: url("../img/user1.png");
+    background-size: cover;
+    background-position-x: -30px;
+    background-position-y: 50px;
+}
 input{   
     width: 278px;   
     height: 18px;   
@@ -31,9 +52,10 @@ input{
     outline: none;   
     padding: 10px;   
     font-size: 13px;   
-    color: #121212;   
-    text-shadow:1px 1px 1px;   
-    border-top: 1px solid #312E3D;   
+    color: #121212;
+    text-indent: 30px;
+    /*text-shadow:1px 1px 1px;   */
+    border-top: 1px solid #312E3D;
     border-left: 1px solid #312E3D;   
     border-right: 1px solid #312E3D;   
     border-bottom: 1px solid #56536A;   
@@ -52,4 +74,8 @@ input{
     line-height: normal;   
     border-radius: 5px;   
     margin: 0;   
+}
+.but input[type=submit]:hover {
+    color: #454545;
+    box-shadow: 5px 5px 10px #454545;
 }

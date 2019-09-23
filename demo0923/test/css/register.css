@@ -1,0 +1,101 @@
+body{
+    font-family: "微软雅黑";
+    font-size: 16px;
+    margin: 0px;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.register{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    margin: -150px 0 0 -150px;
+    width: 300px;
+    height: 300px;
+}
+.register h1{
+    color: #fff;
+    text-shadow:0 0 10px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+h1{
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+/*#login label .icon-user{
+    position: absolute;
+    width: 28px;
+    height: 20px;
+    top: 6px;
+    left: 0;
+    background-image: url("../img/user.png");
+}*/
+#user label .icon-user{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    left: 0;
+    background-image: url("../img/user1.png");
+    background-size: cover;
+}
+#password label .icon-password{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    left: 0;
+    border: black;
+    background-image: url("../img/user1.png");
+    background-size: cover;
+    background-position-x: -30px;
+    background-position-y: 50px;
+}
+#password2 label .icon-password{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    left: 0;
+    border: black;
+    background-image: url("../img/user1.png");
+    background-size: cover;
+    background-position-x: -30px;
+    background-position-y: 50px;
+}
+input{
+    width: 278px;
+    height: 18px;
+    margin-bottom: 10px;
+    outline: none;
+    padding: 10px;
+    font-size: 13px;
+    color: #121212;
+    text-indent: 30px;
+    /*text-shadow:1px 1px 1px;   */
+    border-top: 1px solid #312E3D;
+    border-left: 1px solid #312E3D;
+    border-right: 1px solid #312E3D;
+    border-bottom: 1px solid #56536A;
+    border-radius: 5px;
+    background-color: lightskyblue;
+}
+.but{
+    width: 300px;
+    min-height: 20px;
+    display: block;
+    background-color: #4a77d4;
+    border: 1px solid #3762bc;
+    color: #fff;
+    padding: 9px 14px;
+    font-size: 15px;
+    line-height: normal;
+    border-radius: 5px;
+    margin: 0;
+}
+.but input[type=submit]:hover {
+    color: #454545;
+    box-shadow: 5px 5px 10px #454545;
+}
