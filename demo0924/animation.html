@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css实现简单动画</title>
+		<style>
+			img{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				
+				animation: myanimation ease 2s infinite alternate;
+			}
+			@keyframes myanimation{
+				from{0px,0px}
+				to{600px,900px}
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/login-user.png" width="60" height="60" />
+	</body>
+</html>
