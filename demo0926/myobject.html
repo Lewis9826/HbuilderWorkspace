@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义对象</title>
+	</head>
+	<script>
+		/*两种自定义对象的方式*/
+		// 直译式
+		var person = {
+			name:"张三",
+			gender:"男",
+			age:20,
+			print: function(){
+				console.log(this.name,this.gender,this.age);
+			}
+		}
+		
+		/*// 构造函数
+		function Student(){
+			this.name="林娜";
+			this.gender="女";
+			this.age=23;
+			this.print = function(){
+				console.log(this.name,this.gender,this.age);
+			}
+		}*/
+		
+		// 构造函数
+		function Student(name,gender,age){
+			this.name=name;
+			this.gender=gender;
+			this.age=age;
+			this.print = function(){
+				console.log(this.name,this.gender,this.age);
+			}
+		}
+		
+		var student = new Student("lisa","女",16);
+		
+		// 访问对象
+		person.print();
+		student.print();
+		
+		student.className="计科1班";
+		student.getClassName = function(){
+			return this.className;
+		}
+		console.log(student.getClassName());
+		
+	</script>
+	
+	<body>
+	</body>
+</html>

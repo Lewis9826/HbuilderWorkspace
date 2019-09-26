@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>本地对象的使用</title>
+	</head>
+	<script>
+		var arr = ["java","C++","python"];
+		// 从指定位置插入元素
+		arr.splice(2,0,"php");
+		document.write(arr.join(", "));
+		document.write("<hr />");
+		//修改元素
+		arr.splice(1,1,"C#");
+		document.write(arr.join(", "));
+		document.write("<hr />");
+		// 删除元素
+		arr.splice(2,1);
+		document.write(arr.join(", "));
+		document.write("<hr />");
+	</script>
+	<body>
+		
+	</body>
+</html>
