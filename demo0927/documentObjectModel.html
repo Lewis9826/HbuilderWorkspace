@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>常用DOM操作</title>
+		<style type="text/css">
+			.content{
+				width: 600px;
+				margin: 30px auto 30px;
+				background-color: skyblue;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<form id="form" method="post" action="#">
+			<p><input type="text" name="userName" placeholder="用户名" value="哈哈哈"/></p>
+			<p><input type="password" name="password" placeholder="密码" /></p>
+			<p>
+				<input type="radio" name="gender" value="男" checked />男
+				<input type="radio" name="gender" value="女"  />女
+			</p>
+		</form>
+		</div>
+		
+	</body>
+	<script type="text/javascript" defer="defer">
+		/*四种获取元素的方式*/
+		// 根据ID获取表单对象
+		var form =document.getElementById("form");
+		console.log(form);
+		
+		// 根据标签名获得段落对象
+		var ps = document.getElementsByTagName("p");
+		console.log(ps);
+		
+		// 根据name名称获得表达控件对象
+		var genders = document.getElementsByName("gender");
+		console.log(genders);
+		
+		var content = document.getElementsByClassName("content");
+		console.log(content);
+		
+		/*访问DOM对象的属性*/
+		// 获得用户表单控件对象
+		var userNameField = document.getElementsByName("userName")[0];
+		// 获得属性
+		console.log(userNameField.placeholder);
+		console.log(userNameField.getAttribute("value"));
+		
+		// 设置属性
+		var passwordField = document.getElementsByName("password");
+		passwordField.value="121212";
+		userNameField.setAttribute("value","admin");
+		
+		genders[0].checked=false;
+		genders[1].checked=true;
+		
+		
+	</script>
+</html>

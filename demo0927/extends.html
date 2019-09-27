@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript继承</title>
+		<script type="text/javascript">
+			/*原型继承*/
+			// 父级构造函数
+			function Person() {
+				this.name = "张三";
+				this.gender = "男";
+
+				this.toString = function() {
+					return(this.name + ", " + this.gender);
+				}
+
+			}
+
+			// 子级构造函数
+			function Student() {
+				this.name = "李楠";
+				this.age = 18;
+
+				this.toString = function() {
+					return(this.name + ", " + this.gender + ", " + this.age);
+				}
+			}
+
+			var person = new Person();
+
+			console.log(person);
+			console.log(person.toString());
+
+			Student.prototype = person;
+
+			var student = new Student();
+
+			console.log(student);
+			console.log(student.toString());
+
+			console.log("-----------------------");
+			/*原型式继承*/
+			function createStudent(superObject, sname, sage) {
+				function Student(name, age) {
+					this.name = name;
+					this.age = age;
+
+					this.toString = function() {
+						return this.name + "," + this.gender + "," + this.age;
+					}
+				}
+				//设置父子级关系
+				Student.prototype = superObject;
+				return new Student(sname, sage);
+			}
+
+			//创建子级对象
+			var student = createStudent(person, "李三", 25);
+			console.log(student);
+			console.log(student.toString())
+			console.log(student instanceof Student);
+			console.log(student instanceof Person);
+
+			/*构造函数继承*/
+			console.log("---------------------");
+
+			function Teacher() {
+				// call方法执行函数
+				Person.call(this);
+				this.age = 30;
+				this.name = "韩鹏";
+
+				this.toString = function() {
+					return(this.name + ", " + this.gender + ", " + this.age);
+				}
+			}
+			var teacher = new Teacher();
+			console.log(teacher);
+			console.log(teacher.toString());
+
+			console.log(teacher instanceof Teacher);
+			console.log(teacher instanceof Person);
+
+			/*Es6版本,可以定义类,使用extends继承父类*/
+			class Employee {
+				constructor(name, gender) {
+					this.name = name;
+					this.gender = gender;
+					this.company = "腾讯";
+				}
+
+				toString() {
+					return this.name + "， " + this.gender + "， " + this.company;
+				}
+			}
+
+			class Manager extends Employee {
+				constructor(name, gender, age) {
+					super(name, gender);
+					this.age = age;
+				}
+
+				toString() {
+					return this.name + "， " + this.gender + "， " + this.age + "， " + this.company;
+				}
+			}
+
+			var employee = new Employee("琳达", "女");
+			console.log(employee);
+			console.log(employee.toString());
+
+			var manager = new Manager("大卫", "男", 18);
+			console.log(manager);
+			console.log(manager.toString());
+		</script>
+
+	</head>
+
+	<body>
+	</body>
+
+</html>

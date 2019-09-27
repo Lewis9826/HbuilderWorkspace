@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文本选择控件，可以选择多个文件，DOM树的节点操作</title>
+		<style>
+			#multiFile{
+				position: relative;
+				width: 400px;
+				margin: 50px auto;
+				border: solid 1px lightblue;
+				padding: 20px;
+			}
+			#multiFile dl dt{
+				margin: 15px 30px;
+			}
+			#multiFile dl dd{
+				margin: 15px 30px;
+			}
+			.input{
+				width:300px;
+				height: 30px;
+				border: solid 1px lightgrey;
+				border-radius: 3px;
+			}
+
+			
+		</style>
+		<script type="text/javascript">
+			function add(){
+				// 创建节点对象
+				var fileNode = document.createElement("input");
+				// 设置节点属性
+				fileNode.setAttribute("type","file");
+				fileNode.setAttribute("class","input");
+				// 创建<dd>节点对象
+				var ddNode = document.createElement("dd");
+				// 选择文件控件的节点对象添加给<dd>对象
+				ddNode.appendChild(fileNode);
+				
+				// 获得定义列表的节点对象
+				var dlNode = document.getElementById("multiFile").firstElementChild;
+				
+				dlNode.appendChild(ddNode);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="multiFile">
+			<dl>
+				<dt>
+					<input type="button" value="添加" onclick="add">
+					<input type="button" value="删除" onclick="remove">
+				</dt>
+				<dd>
+					<input type="file" class="input" />
+				</dd>
+			</dl>	
+		</div>
+	</body>
+</html>
