@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义日期构造函数</title>
+	</head>
+	<script type="text/javascript">
+		function dataUtils(year, month, day, hour, minute, second) {
+			this.year = year;
+			this.month = month;
+			this.day = day;
+			this.hour = hour;
+			this.minute = minute;
+			this.second = second;
+			
+			this.print = function() {
+				console.log(this.year + "年" + this.month + "月" + this.day + "日   " + this.hour + ":" + this.minute + ":" + this.second);
+			}
+
+		}
+		
+		var date = new dataUtils(2002,2,21,12,25,30);
+		date.print();
+
+	</script>
+
+	<body>
+	</body>
+
+</html>

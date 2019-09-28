@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Arrays工具对象</title>
+	</head>
+	<script type="text/javascript">
+		function ArraysUtils(array){
+			
+			this.array=array;
+			
+			// 在指定位置添加元素
+			this.add = function(addIndex,ele){
+				this.array.splice(addIndex,0,ele);
+				console.log("添加成功");
+			};
+			
+			// 在指定位置修改元素
+			this.update = function(updateIndex,ele){
+				this.array.splice(updateIndex,1,ele);
+				console.log("修改成功");
+			};
+			
+			// 删除指定索引的元素
+			this.delete = function(deleteIndex){
+				this.array.splice(deleteIndex,1);
+			};
+			
+			// 查询数组
+			this.query = function(){
+				console.log(this.array.join(", "));
+			}
+		}
+		
+		var arr = ["java","C++","python"];
+		
+		var arrayutils = new ArraysUtils(arr);
+		
+		arrayutils.query();
+		
+		arrayutils.add(2,"PHP");
+		
+		arrayutils.query();
+		
+		arrayutils.update(1,"C#");
+		arrayutils.query();
+		
+		arrayutils.delete(3);
+		
+		arrayutils.query();
+		
+		
+	</script>
+	<body>
+	</body>
+</html>
