@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>使用arguments对象模拟函数重构</title>
+	</head>
+
+	<body>
+
+	</body>
+	<script>
+		function refactoring(){
+			 if( arguments.length == 1 ){
+			 	alert("哈哈哈，你只传了一个参数");
+			 	return arguments[0];
+			 }else if(arguments.length == 2){
+			 	alert("哈哈哈，你传了两个参数，让我们来求一下差");
+			 	return arguments[0]-arguments[1];
+			 } else if(arguments.length == 3){
+			 	alert("哈哈哈，你传了三个参数，让我们来求一下和");
+			 	return arguments[0]+arguments[1]+arguments[2];
+			 } else if(arguments.length == 4){
+			 	alert("哈哈哈，你传了四个参数，让我们来求一下乘积");
+			 	return arguments[0]*arguments[1]*arguments[2]*arguments[3];
+			 } else{
+			 	alert("你传入的参数太多了，我不知道写啥了");
+			 }
+		}
+		
+		document.write(refactoring(23));
+		document.write("<hr />");
+		document.write(refactoring(28,12));
+		document.write("<hr />");
+		document.write(refactoring(32,26,2));
+		document.write("<hr />");
+		document.write(refactoring(2,3,4,5));
+		document.write("<hr />");
+	</script>
+
+</html>

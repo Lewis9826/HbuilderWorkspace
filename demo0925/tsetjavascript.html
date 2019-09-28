@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>引入JavaScript程序</title>
+	</head>
+
+	<body>
+		<!--onclick="document.write('hhhhh');"-->
+		<button id="but">按钮</button>
+	</body>
+	<script>
+		/*var button = document.getElementsByTagName("button")[0];
+		button.onclick = function() {
+			document.write("啦啦啦啦啦啦啦");
+		}*/
+//		document.write("啦啦啦啦啦啦啦");
+		document.addEventListener("click",function(){
+			document.getElementById("but").innerText="涵涵涵涵涵";
+		});
+		
+		function fun(){
+			var v1=072;
+			console.log(v1);
+		}
+		fun();
+		
+		console.log(parseInt("1555qdaf"));
+		
+		document.write("<h1>哈哈哈啊哈</h1>")
+		
+		document.write(100>1000||"HHH");
+		
+	</script>
+
+</html>
