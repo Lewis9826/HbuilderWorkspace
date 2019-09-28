@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>使用JS动态访问函数</title>
+		<script type="text/javascript">
+			/**
+			 * 求和
+			 * @param {Object} x
+			 * @param {Object} y
+			 */
+			function sum(x, y) {
+				return x + y;
+			}
+
+			function visit(fun) {
+				console.log(fun.call(null, 10, 20));
+				console.log(fun.apply(null, [60, 30]));
+			}
+
+			visit(sum);
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>
