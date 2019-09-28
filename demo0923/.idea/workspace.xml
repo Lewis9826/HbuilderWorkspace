@@ -106,9 +106,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-233" />
-    <option name="y" value="-14" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-234" />
+    <option name="y" value="-15" />
     <option name="width" value="1750" />
     <option name="height" value="980" />
   </component>
@@ -151,6 +151,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/test/img" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
