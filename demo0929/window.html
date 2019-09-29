@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>BOM对象的window浏览器敞口对象</title>
+		<script type="text/javascript">
+			function openWindow(){
+				window.open("sub.html","subWindow","width=600,height=450,top=200,left=20");
+			}
+		</script>
+	</head>
+	<body>
+		<p><input type="button" onclick="openWindow()" value="单击"/></p>
+		<p id="showMessage"></p>
+	</body>
+</html>

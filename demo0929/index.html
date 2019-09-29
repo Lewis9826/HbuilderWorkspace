@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>表单验证，横幅图像轮播</title>
+		<style>
+			body{
+				font-size: 12px;
+				margin: 0px;
+			}
+			header{
+				position: relative;
+				width: 100%;
+				overflow: auto;
+			}
+			header>section.login{
+				position: absolute;
+				top: 10px;
+				right: 20px;
+			}
+			header nav{
+				position: relative;
+				width: 100%;
+				height: 40px;
+				margin: 50px auto 10px;
+				background-color: lightskyblue;
+			}
+			header #banner{
+				position: relative;
+				width: 800px;
+				margin: 0px auto;
+				
+			} 
+			header #banner section{
+				position: relative;
+				width: 600%;
+				margin-left: -100% ;
+				display: flex;
+			}
+			header #banner section img{
+				margin: 0px;
+				border-width:0px ;
+			}
+			#rgister{
+				position: fixed;
+				top: 0px;
+				right: 0px;
+				bottom: 0px;
+				left: 0px;
+				background-color: rgba(0,0,0,0.3);
+			}
+		</style>
+		<script>
+			function init(){
+				// 获得横幅对象
+				banner = document.getElementById("banner");
+				// 获得左右按钮对象
+				
+				
+				// 横幅绑定鼠标移动事件
+				banner.addEventListener("mouseover",function(){
+					
+				});
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		<header>
+			<section class="login"><a href="#">注册</a></section>
+			<nav></nav>
+			<section id="banner">
+				
+				<section>
+					<img src="img/b1.jpg" width="800" height="450" />
+					<img src="img/b2.jpg" width="800" height="450" />
+					<img src="img/b3.jpg" width="800" height="450" />
+					<img src="img/b4.jpg" width="800" height="450" />
+				</section>
+			</section>
+		</header>
+		<section id="rgister">
+			<section>
+				<form id="form1" name="form1" method="post" action="#">
+					<dl>
+						<dt>注册用户</dt>
+						<dd><label>用户名</label><input type="text" name="userName"/></dd>
+						<dd><label>密码</label><input type="password" name="password"/></dd>
+						<dd><label>性别</label>
+							<input type="radio" name="gender" value="男" checked/>男
+							<input type="radio" name="gender" value="女"/>女
+						</dd>
+						<dd><label>联系电话</label><input type="tel" name="telphone"/></dd>
+						<dd><button type="submit" value="注册"/>注册 </dd>
+					</dl>
+				</form>
+			</section>
+		</section>
+		
+		
+	</body>
+</html>

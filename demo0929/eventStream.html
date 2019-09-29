@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件流</title>
+		<style type="text/css">
+			div{
+				position: relative;
+				width: 600px;
+				height: 500px;
+				background-color: lightskyblue;
+				padding: 5px;
+			}
+			div>div {
+				position: relative;
+				width: 300px;
+				height: 200px;
+				margin: 20px;
+				background-color: lightblue;
+			}
+			div>div>div{
+				position: relative;
+				width: 120px;
+				height: 100px;
+				background-color: lightskyblue;
+			}
+		</style>
+		
+		<script>
+			function init(){
+				
+				// 第三个参数是true，则表示采用事件捕获，若是false，则表示采用事件冒泡
+				document.getElementById("parent").addEventListener("click",function(e){
+					/*var event = e||window.event;
+					console.log(event.target.id);*/
+					console.log("1");
+				},true);
+				document.getElementById("subparent1").addEventListener("click",function(){
+					console.log("1-1");
+				},true);
+				document.getElementById("subparent2").addEventListener("click",function(){
+					console.log("1-2");
+				},true);
+				document.getElementById("sub").addEventListener("click",function(){
+					console.log("1-1-1");
+				},true);
+			}
+		</script>
+		
+	</head>
+	<body onload="init()">
+		<div id="parent">
+			<div id="subparent1">
+				<div id="sub"> </div>
+			</div>
+			<div id="subparent2"></div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>子窗口</title>
+		<script type="text/javascript">
+			function submitMessage(){
+				var message = document.getElementById("message").value;
+				if (!message) {
+					alert("请输入内容");
+					return;
+				}
+				opener.document.getElementById("showMessage").innerHTML=message;
+				window.close;
+			}
+		</script>
+		
+	</head>
+	<body>
+		<p><input type="text" id="message" name="message"/></p>
+		<p><input type="button" value="确定" onclick="submitMessage()"/></p>
+	</body>
+</html>
