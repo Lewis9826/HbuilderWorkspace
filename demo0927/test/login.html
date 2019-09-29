@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<style>
+			body{
+				background-color: #FFFFFF;
+				background-repeat: no-repeat;
+			}
+			.l1{
+				width: 600px;
+				height: 450px;
+				margin: 10px auto 10px;
+				padding: 50px;	
+				border-radius: 5px;		
+			}
+			p{
+				margin: 20px auto 20px;
+				text-align: center;
+			}	
+			form{
+				margin: 35px auto 5px;
+				text-align: center;
+				border: solid 1px #808080;
+				background-color: lightskyblue;
+				border-radius: 10px;
+			}	
+			.btn{
+				margin: 1px auto 1px;
+				padding: 0px;				
+			}	
+			.btn button{
+				margin: 20px;
+				width: 50px;
+				height: 30px;
+				border-radius: 5px;
+				background-color: lightsteelblue;
+				font-weight: bold;
+				box-shadow: 5px 5px 10px blueviolet;
+			}
+			input[type=text]{
+				border-radius: 5px;
+				text-indent: 30px;
+				height: 30px;
+				box-shadow: -5px -5px 10px #454545;
+				background-repeat: no-repeat;
+				background-color: #FFFFFF;
+			}
+			input[type=password]{	
+				border-radius: 5px;
+				text-indent: 30px;
+				height: 30px;
+				box-shadow: -5px -5px 10px #454545;			
+				background-repeat: no-repeat;
+				background-color: #FFFFFF;
+			}
+			section{
+				display: inline-block;
+				width: 300px;
+				text-align: right;
+			}
+			h2{
+				text-align: center;
+				padding: 5px; 
+				border-radius: 5px;
+				color: black;
+			}
+			label{
+				color:whitesmoke;
+			}
+		</style>
+		<link rel="icon" href="img/icon0.ico" type="image/x-icon"/>
+	</head>
+	<body>
+		<div class="l1">
+			<h2 >
+				<strong>登录</strong>
+			</h2>
+			<form id="form2" name="form2" method="get" onsubmit="return check();" action="#" >
+				<p >
+					<label >用户名:</label>
+					<input type="text" placeholder="请输入用户名" id="uname" name="uname" autofocus required/>
+					<i id="erroUname" style="position: absolute; right: 450px;top: 188px; color: red;"></i>
+				</p>
+				<p>
+					<label>密码:&nbsp;</label>
+					<input type="password" placeholder="请输入密码" id="pwd" name="pwd" required/>	
+					<i id="erroPwd" style="position: absolute; right: 450px;top: 245px; color: red;"></i>
+				</p>
+				<div class="btn">
+				<button id="up" type="submit" name="up" >登录</button>
+				<button id="cancel" type="reset" name="cancel" >取消</button>
+				</div>
+												
+			</form>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var pat=/^[A-Za-z0-9]{6}$/;		
+		function check(){
+			var inputText=document.getElementById("uname").value;
+			var passText=document.getElementById("pwd").value;
+			var form2=document.getElementById("form2");
+			var acURL=form2.action;				
+			if(pat.test(inputText)){//验证用户名
+					if(pat.test(passText)){//用户名匹配，验证密码
+						form2.setAttribute("action","index.html");
+					}else{//密码不匹配
+						document.getElementById("erroPwd").innerHTML="<strong>请输入6位的正确密码</strong>";
+						document.getElementById("pwd").value="";
+						return false;
+					}
+			}else{	//用户名不匹配
+				document.getElementById("erroUname").innerHTML="<strong>请输入6位的用户名称</strong>";	
+				document.getElementById("uname").value="";
+				return false;
+			}
+		}
+	</script>
+</html>
