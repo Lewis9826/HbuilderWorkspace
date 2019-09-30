@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>右击弹出菜单</title>
 		<style>
-			#contextMenu{
+			#contextMenu {
 				position: absolute;
 				width: 200px;
 				height: 300px;
@@ -15,24 +16,34 @@
 			}
 		</style>
 		<script type="text/javascript">
-			 window.oncontextmenu = function(e){
+			window.oncontextmenu = function(e) {
 				// 取消默认的浏览器自带右键，很重要！！！！
 				e.preventDefault();
-				
+
 				// 获取我们自定义的右键菜单
-				var menu document.querySelector("div#contextMenu");
-				
+				var menu = document.querySelector("div#contextMenu");
+
 				// 根据时间对象中鼠标点击的位置，进行定位
-				menu.style.left = e.clientX+' px';
-				menu.style.top = e.clientY+' px';
-				
+				menu.style.left = e.clientX + 'px';
+				menu.style.top = e.clientY + 'px';
+
 				// 显示菜单
-				menu.style.display="block";
-				
+				menu.style.display = "block";
+
 			}
+			window.onclick = function() {
+				var menu = document.querySelector("#contextMenu");
+				//隐藏菜单
+				menu.style.display = "none";
+			}
+			
+			
+			
 		</script>
 	</head>
+
 	<body>
 		<div id="contextMenu"></div>
 	</body>
+
 </html>
