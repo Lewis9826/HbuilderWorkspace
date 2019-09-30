@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQuery核心函数</title>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js" ></script>
+		<script>
+			// 页面加载完毕后执行
+			$(function(){
+				// 选取id为content的元素,返回的是JQuery对象，该对象是DOM对象组成的数组
+//				var content = $('#content');
+				/*JQuery对象与DOM对象之间的转换*/
+				
+				/*// 转换成DOM对象
+				console.log(content.get(0));
+				console.log(content[0]);
+				
+				// 转换成JQuery对象
+				var contentDom = document.getElementById("content");
+				var contentJquery = $(contentDom);
+				
+				console.log(contentJquery);*/
+				
+				/*// 使用JQuery核心函数选取元素
+				var content = jQuery("#content");
+				console.log(content);*/
+				
+				// 选取元素，通过css选择器
+				// 获得所有li
+				/*var lis = $("#content ul li");
+				console.log(lis.length);
+				console.log(lis);
+				
+				// 获得li中内容
+				// 获得html元素
+				for(var i=0;i<lis.length;i++){
+					console.log(Number(i)+1,$(lis.get(i)).html());
+				};
+				// 获得文本
+				for (var i=0;i<lis.length;i++) {
+					console.log(Number(i)+1,$(lis.get(i)).text());
+				}*/
+				
+				/*// 设置li中元素
+				// 设置html
+				lis.html("");
+				// 设置内容
+				lis.text("");*/
+				
+				/*var message = $("#form1 input[name=message]");
+				
+				console.log(message);
+				message.attr("placeholder","信息");
+				message.focus();*/
+
+
+			});
+			
+			/*$(function(){
+				var all = $("#datalist td input[name=all]");
+				all.click(function(){
+					$("#datalist td input[name=id]").prop("checked",true);
+				});
+			});*/
+		
+			/*
+			 * 全选与反选
+			 */
+			function checkeds(thisz){
+				// 修改记录的复选框选中状态
+				$("#datalist table tr td input[name=id]").prop("checked",thisz.checked);
+			};
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">服装</a></li>
+				<li><a href="#">腕表</a></li>
+				<li><a href="#">箱包</a></li>
+				<li><a href="#">美妆</a></li>
+			</ul>
+			<form id="form1" action="#" method="post">
+				<p><input type="text" name="message"/></p>
+				<p><input type="button" value="提交" onclick=""/></p>
+
+			</form>
+		</div>
+		
+		<div id="datalist">
+			<table style="width: 600px;border: solid 1px lightblue;">
+				<tr>
+					<td><input type="checkbox" name="all" onclick="checkeds(this);"/></td>
+					<td>序号</td>
+					<td>语言</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="id" /></td>
+					<td>1</td>
+					<td>JAVA</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="id" /></td>
+					<td>2</td>
+					<td>PHP</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="id" /></td>
+					<td>3</td>
+					<td>C++</td>
+				</tr>
+				
+				
+				
+			</table>
+		</div>
+		
+		
+	</body>
+</html>
